@@ -422,11 +422,11 @@ class CommonTextSelectionGestureDetectorBuilder
       switch (Theme.of(_context).platform) {
         case TargetPlatform.iOS:
         case TargetPlatform.macOS:
-          renderEditable.selectPositionAt(
-            from: details.globalPosition,
-            cause: SelectionChangedCause.longPress,
-          );
-          break;
+          // renderEditable.selectPositionAt(
+          //   from: details.globalPosition,
+          //   cause: SelectionChangedCause.longPress,
+          // );
+          // break;
         case TargetPlatform.android:
         case TargetPlatform.fuchsia:
         case TargetPlatform.linux:
@@ -448,21 +448,21 @@ class CommonTextSelectionGestureDetectorBuilder
       switch (Theme.of(_context).platform) {
         case TargetPlatform.iOS:
         case TargetPlatform.macOS:
-          switch (details.kind) {
-            case PointerDeviceKind.mouse:
-            case PointerDeviceKind.stylus:
-            case PointerDeviceKind.invertedStylus:
-              // Precise devices should place the cursor at a precise position.
-              renderEditable.selectPosition(cause: SelectionChangedCause.tap);
-              break;
-            case PointerDeviceKind.touch:
-            case PointerDeviceKind.unknown:
-              // On macOS/iOS/iPadOS a touch tap places the cursor at the edge
-              // of the word.
-              renderEditable.selectWordEdge(cause: SelectionChangedCause.tap);
-              break;
-          }
-          break;
+          // switch (details.kind) {
+          //   case PointerDeviceKind.mouse:
+          //   case PointerDeviceKind.stylus:
+          //   case PointerDeviceKind.invertedStylus:
+          //     // Precise devices should place the cursor at a precise position.
+          //     renderEditable.selectPosition(cause: SelectionChangedCause.tap);
+          //     break;
+          //   case PointerDeviceKind.touch:
+          //   case PointerDeviceKind.unknown:
+          //     // On macOS/iOS/iPadOS a touch tap places the cursor at the edge
+          //     // of the word.
+          //     renderEditable.selectWordEdge(cause: SelectionChangedCause.tap);
+          //     break;
+          // }
+          // break;
         case TargetPlatform.android:
         case TargetPlatform.fuchsia:
         case TargetPlatform.linux:
@@ -480,11 +480,11 @@ class CommonTextSelectionGestureDetectorBuilder
     switch (Theme.of(_context).platform) {
       case TargetPlatform.iOS:
       case TargetPlatform.macOS:
-        renderEditable.selectPositionAt(
-          from: details.globalPosition,
-          cause: SelectionChangedCause.longPress,
-        );
-        break;
+        // renderEditable.selectPositionAt(
+        //   from: details.globalPosition,
+        //   cause: SelectionChangedCause.longPress,
+        // );
+        // break;
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
       case TargetPlatform.linux:
